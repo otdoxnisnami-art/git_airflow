@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+
+# Airflow
+airflow/          # Исключаем папку airflow внутри dags
+airflow-venv/
+logs/
+airflow.db
+webserver_config.py
+
