@@ -1,3 +1,4 @@
+from airflow.providers.standard.operators.bash import BashOperator
 from airflow import DAG
 from airflow.providers.standard.operators.python import PythonOperator
 from datetime import datetime
@@ -29,13 +30,13 @@ t1 = PythonOperator(
 )
 
 t2 = PythonOperator(
-    task_id='calculate_task',
+    task_id='calculate_task_2',
     python_callable=sum_int,
     dag=dag
 )
 
 t3 = BashOperator(
-    task_id='calculate_task',
+    task_id='calculate_task_3',
     bash_command='pyhon hello_there_script.py',
     dag=dag
 )
